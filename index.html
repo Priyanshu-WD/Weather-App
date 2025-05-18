@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Application</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="image/Jaan-Jaak-Weather-Rain.512.png" type="image/x-icon">
+</head>
+
+<body class="w-full relative font-Monts">
+    <video autoplay muted loop playsinline
+        class="pointer-events-none absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+        src="videos/bg-body.mp4"></video>
+    <header class="p-1.5  w-full">
+        <nav class=" w-full ">
+            <figure class="flex justify-between w-full items-center">
+                <img class="w-28 sm:w-full max-w-[148px] h-auto" src="./image/logo.webp" alt="Logo">
+                <div class="relative md:w-full  md:text-center flex justify-center">
+                    <div class="relative  md:w-1/2 ">
+                        <input
+                            class="border rounded-2xl w-full text-base italic font-light text-white p-1 pl-2 pr-8 border-white bg-transparent focus:outline-2 focus:outline-sky-300 focus:bg-transparent"
+                            onfocus="
+                            this.value = ''" type="search" name="SearchCity" placeholder="Search City" id="inputField">
+                        <button class="w-4 text-white absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer z-10"
+                            id="inputBtn">
+                            <img src="image/search.png" alt="Search_Icon">
+                        </button>
+                    </div>
+
+                </div>
+            </figure>
+        </nav>
+    </header>
+    <main class="min-h-screen mt-6 flex justify-center items-center "> <!--Parent-->
+        <div class="w-full"><!--Child-->
+            <section class=""> <!--Grand Child-->
+                <figure class=" text-white pl-4  md:pl-8 lg:pl-14 ">
+                    <span id="sunRise">_ _/_ _ / _ _</span><br>
+                    <span id="sunSet">_ _/_ _ / _ _</span><br>
+                    <span id="localTime">_ _/_ _ / _ _</span><br>
+                    <span id="TimeZone">_ _/_ _ / _ _</span><br>
+                    <span id="description">_ _/_ _ / _ _</span>
+                </figure>
+            </section>
+            <div class="w-full md:flex md:justify-center md:items-center "><!--Grand Child-->
+                <section class="text-white flex flex-col gap-4 justify-center p-4  md:p-8 lg:p-14  w-full md:w-1/2 ">
+                    <div class="w-auto  flex flex-col gap-2">
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl " id="temp">
+                            _ _/_ _ / _ _
+                        </h1>
+                        <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light" id="weatherStatus">
+                            _ _/_ _ / _ _
+                        </h2>
+                        <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light" id="cityName">_ _/_ _ / _ _</h3>
+                    </div>
+                    <div class=" flex flex-col sm:flex-row gap-4 md:gap-6 mt-4">
+                        <div class=" flex gap-4 items-center ">
+                            <img class="w-8 sm:w-12 md:w-16" src="image/wind.webp" alt="Wind">
+                            <div class="flex flex-col">
+                                <span class="text-sm sm:text-lg md:text-xl" id="wind">_ _/_ _ / _ _</span>
+                                
+                            </div>
+                        </div>
+                        <div class=" flex gap-4 items-center ">
+                            <img class="w-8 sm:w-12 md:w-16" src="image/humidity.webp" alt="Humidity">
+                            <div class="flex flex-col">
+                                <span class="text-sm sm:text-lg md:text-xl" id="humidity">_ _/_ _ / _ _</span>
+                            
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <section class=" flex items-center justify-center  w-full overflow-hidden md:w-1/2 ">
+                    <img class="animate-rotate  drop-shadow-earth" src="image/Earth.webp" alt="Earth">
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer id="dailyForecast" class="flex overflow-x-scroll md:overflow-hidden justify-start  text-white gap-4 md:justify-center p-4 ">
+        
+
+    </footer>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js" integrity="sha512-QoJS4DOhdmG8kbbHkxmB/rtPdN62cGWXAdAFWWJPvUFF1/zxcPSdAnn4HhYZSIlVoLVEJ0LesfNlusgm2bPfnA==" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

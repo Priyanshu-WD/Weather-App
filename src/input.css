@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+@theme{
+    
+    --animate-rotate: rotate 120s linear infinite;
+
+    @keyframes rotate {
+        0%{
+           transform: rotate(0deg);
+          }
+       100%{
+           transform: rotate(360deg);
+          }
+       }
+       
+       --drop-shadow-earth: 0 0px 16px #21629D;
+
+       --font-Monts: "Montserrat", sans-serif;
+}
